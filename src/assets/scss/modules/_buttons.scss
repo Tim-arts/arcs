@@ -1,0 +1,25 @@
+@use "../base/_colors" as colors;
+@use "../base/_variables" as variables;
+
+.btn, a {
+    &.theme-1 {
+        color: white;
+
+        font-size: 1rem;
+        font-weight: 500;
+
+        background: rgb(97,86,249);
+        background: linear-gradient(90deg, rgba(97,86,249,1) 0%, rgba(26,18,159,1) 100%);
+
+        border-radius: variables.$radius-high;
+        text-transform: uppercase;
+
+        padding: 0.75rem 2.5rem;
+    }
+
+    &.theme-2 {
+        border: none;
+
+    }
+}
+

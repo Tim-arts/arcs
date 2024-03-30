@@ -1,0 +1,23 @@
+{
+  "name": "ARCS",
+  "short_name": "ARCS",
+  "theme_color": "#6156F9",
+  "background_color": "#6156F9",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+       {
+         "src": "assets/icons/arcs.svg",
+         "sizes": "72x72 96x96 128x128 144x144 152x152 192x192 384x384 512x512"
+       },
+       {
+         "src": "assets/icons/arcs-icon-192x192.png",
+         "sizes": "192x192"
+       },
+       {
+         "src": "assets/icons/arcs-icon-512x512.png",
+         "sizes": "512x512"
+       }
+    ]
+}

@@ -1,0 +1,13 @@
+@use "bootstrap/scss/bootstrap-reboot";
+
+html, body {
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}

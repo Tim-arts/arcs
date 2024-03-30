@@ -1,0 +1,34 @@
+/* Header */
+$header-offset: 20px;
+
+/* Border-radius */
+$radius-base: 0.25rem;
+$radius-double: $radius-base * 2;
+$radius-high: $radius-base * 10;
+$radius-rounded: 50%;
+
+/* Media queries breakpoints */
+$sm-down: 575px;
+$md-down: 767px;
+$lg-down: 991px;
+$xlg-down: 1199px;
+$xxl-down: 1599px;
+$xxxl-down: 1919px;
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xlg: 1200px;
+$xxl: 1600px;
+$xxxl: 1920px;
+
+$sm-up: 577px;
+$md-up: 769px;
+$lg-up: 993px;
+$xlg-up: 1201px;
+$xxl-up: 1601px;
+$xxxl-up: 1920px;
+
+/* Animations */
+$animation-time-03: .3s;
+$animation-time-1: 1s;

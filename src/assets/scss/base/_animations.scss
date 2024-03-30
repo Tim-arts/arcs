@@ -1,0 +1,27 @@
+@use "_variables" as variables;
+
+/* Animations classes */
+.anim-fade-in {
+    animation-duration: variables.$animation-time-03;
+    animation-name: fade-in;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.anim-fade-out {
+    animation-duration: variables.$animation-time-03;
+    animation-name: fade-out;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+/* Animations keyframes */
+@keyframes fade-in {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+@keyframes fade-out {
+    0% { opacity: 1 }
+    100% { opacity: 0 }
+}

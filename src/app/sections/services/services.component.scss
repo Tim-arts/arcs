@@ -1,0 +1,99 @@
+@use "./src/assets/scss/base/_colors" as colors;
+@use "./src/assets/scss/base/_variables" as variables;
+
+$card-flex-width: 100%;
+
+$xlg-card-number: 3;
+$lg-card-number: 2;
+$md-card-number: 2;
+$sm-card-number: 1;
+
+$xlg-card-spacing: 90px;
+$lg-card-spacing: $xlg-card-spacing / 2;
+$md-card-spacing: $lg-card-spacing / 2;
+// $sm-card-spacing: 0;
+
+$xlg-card-width: ($card-flex-width / $xlg-card-number);
+$lg-card-width: ($card-flex-width / $lg-card-number);
+$md-card-width: ($card-flex-width / $md-card-number);
+$sm-card-width: ($card-flex-width / $sm-card-number);
+
+#services {
+    margin: 150px 0;
+
+    .cards-container {
+        display: flex;
+        flex-flow: row wrap;
+
+        .card {
+            border: none;
+            border-radius: variables.$radius-high;
+            box-shadow: 0 10px 20px rgba(colors.$purple, 15%);
+
+            @media (min-width: variables.$xlg) {
+                flex: 1 calc(#{$lg-card-width} - (#{$lg-card-spacing} * (#{$lg-card-number} - (#{$lg-card-number} - 1))));
+                margin-right: $lg-card-spacing;
+
+                &:nth-child(#{$lg-card-number}n) {
+                    margin-right: 0;
+                }
+            }
+
+            @media (min-width: variables.$lg) and (max-width: variables.$xlg-down) {
+                flex: 1 calc(#{$lg-card-width} - (#{$lg-card-spacing} * (#{$lg-card-number} - (#{$lg-card-number} - 1))));
+                margin-right: $lg-card-spacing;
+
+                &:nth-child(#{$lg-card-number}n) {
+                    margin-right: 0;
+                }
+            }
+
+            @media (min-width: variables.$md) and (max-width: variables.$lg-down) {
+                flex: 1 calc(#{$md-card-width} - (#{$md-card-spacing} * (#{$md-card-number} - (#{$md-card-number} - 1))));
+                margin-right: $md-card-spacing;
+
+                &:nth-child(#{$md-card-number}n) {
+                    margin-right: 0;
+                }
+            }
+
+            @media (max-width: variables.$md) {
+                flex: 1 $sm-card-width;
+                margin-right: 0;
+                box-shadow: 0 0 20px rgba(colors.$purple, 15%);
+            }
+
+            h3 {
+                font-family: "Poppins", Arial, sans-serif;
+                color: colors.$grey-dark;
+                font-size: 1.125rem;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            p {
+                font-family: "Lato", Arial, sans-serif;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &::after {
+        background: url("../../../assets/images/backgrounds/services.svg") top right no-repeat;
+        width: 100%;
+        height: 100%;
+        top: 5%; right: 5%;
+    }
+
+    @media (min-width: variables.$lg) and (max-width: variables.$xlg) {
+        margin: 100px 0;
+    }
+
+    @media (max-width: variables.$lg) {
+        margin: 40px 0;
+
+        > div:last-child {
+            padding: 0 2rem;
+        }
+    }
+}

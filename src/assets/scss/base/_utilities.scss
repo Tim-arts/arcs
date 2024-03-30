@@ -1,0 +1,13 @@
+@use "./src/assets/scss/base/_variables" as variables;
+
+.d-lg-up-none {
+    @media (min-width: variables.$lg-up) {
+        display: none !important;
+    }
+}
+
+.d-lg-up-block {
+    @media (min-width: variables.$lg-up) {
+        display: block !important;
+    }
+}

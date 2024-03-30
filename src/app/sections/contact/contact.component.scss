@@ -1,0 +1,30 @@
+@use "./src/assets/scss/base/_colors" as colors;
+@use "./src/assets/scss/base/_variables" as variables;
+
+#contact {
+    margin: 80px 0;
+
+    input, textarea {
+        color: colors.$grey-dark;
+        font-family: "Lato", Arial, sans-serif;
+        border-radius: variables.$radius-double;
+        background-color: colors.$grey-lighter;
+        border: none;
+
+        &::placeholder {
+            color: colors.$grey-label;
+        }
+    }
+
+    input {
+        height: 60px;
+    }
+
+    textarea {
+        min-height: 60px;
+    }
+
+    @media (max-width: variables.$lg) {
+        margin: 40px 0;
+    }
+}

@@ -1,0 +1,21 @@
+<section id="services" class="container-fluid background">
+    <div class="row">
+        <div class="col-sm-12 offset-md-1 col-md-10 offset-xl-2 col-xl-8">
+            <h2>Nos services</h2>
+            <h1>Qu'avons nous à vous offrir ?</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 offset-md-1 col-md-10 offset-xl-2 col-xl-8">
+            <div class="cards-container">
+                <div class="card d-inline-block my-4" *ngFor="let service of services">
+                    <div class="card-body">
+                        <img class="d-block mx-auto mt-2" src="{{service.icon}}" alt="Icon" width="90" />
+                        <h3 class="card-title mt-5 text-center">{{service.title}}</h3>
+                        <p class="card-text mt-4 text-center">{{service.paragraph}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

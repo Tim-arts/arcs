@@ -1,0 +1,28 @@
+version: '3.7'
+services:
+    node:
+        build:
+            context: ../
+            dockerfile: ./docker/node/Dockerfile
+        ports:
+            - "4200:4200"
+            - "9005:9005"
+        volumes:
+            - ../:/srv/app
+            - /srv/app/node_modules
+        command: >
+            bash -c "npm install
+                     ng serve --host 0.0.0.0 --poll 3"
+
+    # http-server:
+    #     image: node
+    #     ports:
+    #         - "8080:8080"
+    #     volumes:
+    #         - ../:/srv/app
+    #         - /srv/app/node_modules
+    #         - /srv/dist
+    #     command: >
+    #         bash -c "npm install
+    #                  ng build --prod
+    #                  npx http-server -p 8080 -c-1 dist/ARCS"
