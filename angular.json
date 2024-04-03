@@ -22,7 +22,8 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
+            "buildOptimizer": true,
             "assets": [
               "src/favicon.ico",
               "src/robots.txt",
@@ -32,7 +33,10 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+              "allowedCommonJsDependencies": [
+                  "bootstrap/dist/js/bootstrap.min.js", "jquery/dist/jquery.min.js"
+              ]
           },
           "configurations": {
             "production": {
@@ -45,7 +49,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -71,18 +74,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ARCS:build"
+            "buildTarget": "ARCS:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ARCS:build:production"
+              "buildTarget": "ARCS:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ARCS:build"
+            "buildTarget": "ARCS:build"
           }
         },
         "test": {
@@ -129,6 +132,5 @@
           }
         }
       }
-    }},
-  "defaultProject": "ARCS"
+    }}
 }

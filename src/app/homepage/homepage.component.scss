@@ -1,14 +1,14 @@
 @use "bootstrap/scss/bootstrap";
 
 /* Base */
-@use "./src/assets/scss/base/_variables" as variables;
-@use "./src/assets/scss/base/_colors" as colors;
-@use "./src/assets/scss/base/_typographies";
-@use "./src/assets/scss/base/_utilities";
-@use "./src/assets/scss/base/_animations";
+@use "../../assets/scss/base/_variables" as variables;
+@use "../../assets/scss/base/_colors" as colors;
+@use "../../assets/scss/base/_typographies";
+@use "../../assets/scss/base/_utilities";
+@use "../../assets/scss/base/_animations";
 
 /* Modules */
-@use "./src/assets/scss/modules/_buttons";
+@use "../../assets/scss/modules/_buttons";
 
 section {
     position: relative;
